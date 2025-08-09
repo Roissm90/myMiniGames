@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mini Games</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body>
+    <header class="header-nav">
+      <div class="container-grid">
+        <div class="container-left">
+          <div class="wrapper-menu">
+            <div class="wrapper-menu-image">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <ul class="menu-list">
+              <div class="container-grid">
+                <li class="list-item" data-target="all">Todos</li>
+              </div>
+            </ul>
+          </div>
+          <h1 class="title-img">
+            <img
+              class="picture"
+              src="./public/joystick.png"
+              alt="joystick"
+              title="Mini Games"
+            />
+          </h1>
+        </div>
+        <div class="container-right">
+          <div class="wrapper-favourites">
+            <img
+              class="picture bg"
+              src="./public/heart_fav.png"
+              alt="heart"
+              title="heart"
+            />
+            <img
+              class="picture no-bg"
+              src="./public/heart_fav_no_bg.png"
+              alt="heart"
+              title="heart"
+            />
+            <p class="info">
+              Actualmente estamos trabajando en esta sección. Gracias por su
+              paciencia.
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="wrapper-list-games mt-first-sctn" id="gamesWrapper">
+      <div class="container-grid"></div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/handlers.js"></script>
+  </body>
+</html>

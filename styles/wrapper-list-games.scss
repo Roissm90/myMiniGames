@@ -1,0 +1,113 @@
+$dark-blue: #001e5c;
+$dark-blue-mid-transparent: #001e5c80;
+$dark-yellow: #8b8601;
+$light-yellow: #d5d4b3;
+$custom-white: #dadada;
+$custom-white-mid-transparent: #dadada80;
+
+.wrapper-list-games {
+  background-color: $light-yellow;
+
+  .container-grid {
+    padding: 48px 32px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    .link-game {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      background: $custom-white-mid-transparent;
+      border: 1px solid $custom-white-mid-transparent;
+      border-radius: 20px;
+      padding: 16px;
+      text-decoration: none;
+      box-shadow: 0 5px 5px $dark-blue-mid-transparent;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+      position: relative;
+
+      &:hover {
+        //transform: translateY(5px);
+        box-shadow: none;
+        border: 1px solid $dark-yellow;
+      }
+
+      .picture {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+        margin-bottom: 15px;
+        position: absolute;
+        top: 16px;
+        left: 16px;
+      }
+
+      .name-game {
+        font-size: 20px;
+        font-weight: 600;
+        color: $dark-blue;
+        margin: 0 0 10px 92px;
+        text-align: center;
+      }
+
+      .description-game {
+        font-size: 16px;
+        color: $dark-blue;
+        text-align: center;
+        line-height: 1.4;
+        margin-top: 48px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1441px) {
+  .wrapper-list-games {
+    .container-grid {
+      grid-template-columns: repeat(4, 1fr);
+      padding: 48px;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .wrapper-list-games {
+    .container-grid {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 32px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .wrapper-list-games {
+    .container-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper-list-games {
+    .container-grid {
+      padding: 16px 32px;
+    }
+
+    .link-game {
+      .picture {
+        width: 30px;
+        height: 30px;
+      }
+
+      .name-game {
+        margin: 0 0 10px 62px;
+      }
+
+      .description-game {
+        margin-top: 24px;
+      }
+    }
+  }
+}
