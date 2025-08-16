@@ -301,22 +301,52 @@
 }
 @media (max-width: 576px) {
   .wrapper-list-games .container-grid {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 5%;
+    row-gap: 1rem;
+  }
+  .wrapper-list-games .container-grid .link-game {
+    width: 30%;
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .wrapper-list-games .container-grid .link-game .picture {
+    position: unset;
+    margin-bottom: 0;
+  }
+  .wrapper-list-games .container-grid .link-game .name-game {
+    margin: 1rem auto;
+  }
+  .wrapper-list-games .container-grid .link-game .description-game {
+    display: none;
   }
 }
 @media (max-width: 480px) {
   .wrapper-list-games .container-grid {
     padding: 16px 32px;
+    gap: 6%;
   }
-  .wrapper-list-games .link-game .picture {
+  .wrapper-list-games .container-grid .link-game {
+    width: 47%;
+  }
+  .wrapper-list-games .container-grid .link-game .picture {
     width: 30px;
     height: 30px;
   }
-  .wrapper-list-games .link-game .name-game {
-    margin: 0 0 10px 62px;
+}
+@media (max-width: 375px) {
+  .wrapper-list-games .container-grid {
+    padding: 16px;
   }
-  .wrapper-list-games .link-game .description-game {
-    margin-top: 24px;
+  .wrapper-list-games .container-grid .link-game {
+    padding: 0;
+  }
+  .wrapper-list-games .container-grid .link-game .picture {
+    width: 30px;
+    height: 30px;
   }
 }
 * {

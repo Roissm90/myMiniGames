@@ -84,7 +84,32 @@ $custom-white-mid-transparent: #dadada80;
 @media (max-width: 576px) {
   .wrapper-list-games {
     .container-grid {
-      grid-template-columns: 1fr;
+      //grid-template-columns: repeat(4, 1fr);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: stretch;
+      gap: 5%;
+      row-gap: 1rem;
+
+      .link-game {
+        width: 30%;
+        background-color: transparent;
+        box-shadow: none;
+
+        .picture {
+          position: unset;
+          margin-bottom: 0;
+        }
+
+        .name-game {
+          margin: 1rem auto;
+        }
+
+        .description-game {
+          display: none;
+        }
+      }
     }
   }
 }
@@ -93,20 +118,30 @@ $custom-white-mid-transparent: #dadada80;
   .wrapper-list-games {
     .container-grid {
       padding: 16px 32px;
+      gap: 6%;
+      .link-game {
+        width: 47%;
+        .picture {
+          width: 30px;
+          height: 30px;
+        }
+      }
     }
+  }
+}
 
-    .link-game {
-      .picture {
-        width: 30px;
-        height: 30px;
-      }
-
-      .name-game {
-        margin: 0 0 10px 62px;
-      }
-
-      .description-game {
-        margin-top: 24px;
+@media (max-width: 375px) {
+  .wrapper-list-games {
+    .container-grid {
+      padding: 16px;
+      //gap: 0%;
+      .link-game {
+        //width: 100%;
+        padding: 0;
+        .picture {
+          width: 30px;
+          height: 30px;
+        }
       }
     }
   }
